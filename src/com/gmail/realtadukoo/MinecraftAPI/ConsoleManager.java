@@ -1,9 +1,18 @@
 package com.gmail.realtadukoo.MinecraftAPI;
 
-import com.gmail.realtadukoo.MinecraftAPI.MinecraftFormatting.Color;
-import com.gmail.realtadukoo.MinecraftAPI.MinecraftFormatting.Format;
-
+/**
+ * A manager used for general console functions.
+ * 
+ * @author Logan Ferree (Tadukoo)
+ * @version 0.1-Alpha1-SNAPSHOT
+ */
 public interface ConsoleManager{
 	
-	public void printMessage(String priority, Color color, Format[] otherFormatting, String message);
+	/**
+	 * 
+	 * 
+	 * @param priority
+	 * @param message
+	 */
+	public void printMessage(ConsolePriority priority, Message message);
 }
