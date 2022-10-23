@@ -14,5 +14,5 @@ public interface ConsoleManager{
 	 * @param priority
 	 * @param message
 	 */
-	public void printMessage(ConsolePriority priority, Message message);
+	void printMessage(ConsolePriority priority, Message message);
 }

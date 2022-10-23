@@ -23,16 +23,29 @@ public class BukkitPlayerManager extends BukkitManager implements PlayerManager{
 						.build();
 	}
 	
+	/** {@inheritDoc} */
 	@Override
 	public Player getPlayerFromName(String name){
-		return toAPIPlayer(plugin.getServer().getPlayer(name));
+		org.bukkit.entity.Player bukkitPlayer = plugin.getServer().getPlayer(name);
+		// Null check for player
+		if(bukkitPlayer == null){
+			return null;
+		}
+		return toAPIPlayer(bukkitPlayer);
 	}
 	
+	/** {@inheritDoc} */
 	@Override
 	public Player getPlayerFromUUID(UUID UUID){
-		return toAPIPlayer(plugin.getServer().getPlayer(UUID));
+		org.bukkit.entity.Player bukkitPlayer = plugin.getServer().getPlayer(UUID);
+		// Null check for player
+		if(bukkitPlayer == null){
+			return null;
+		}
+		return toAPIPlayer(bukkitPlayer);
 	}
 	
+	/** {@inheritDoc} */
 	@Override
 	public void sendMessage(Player player, Message message){
 		// Send the formatted message to the player
@@ -40,6 +53,7 @@ public class BukkitPlayerManager extends BukkitManager implements PlayerManager{
 		toBukkitPlayer(player).sendMessage(formattedMessage);
 	}
 	
+	/** {@inheritDoc} */
 	@Override
 	public boolean hasPermission(Player player, String permission){
 		return toBukkitPlayer(player).hasPermission(permission);

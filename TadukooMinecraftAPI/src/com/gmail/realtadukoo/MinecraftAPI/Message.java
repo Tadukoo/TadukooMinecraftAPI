@@ -65,9 +65,9 @@ public class Message{
 		}
 	}
 	
-	private Color color;
-	private List<Format> otherFormatting;
-	private String message;
+	private final Color color;
+	private final List<Format> otherFormatting;
+	private final String message;
 	
 	private Message(Color color, List<Format> otherFormatting, String message){
 		this.color = color;

@@ -10,6 +10,7 @@ public class BukkitConsoleManager extends BukkitManager implements ConsoleManage
 		super(plugin);
 	}
 	
+	/** {@inheritDoc} */
 	@Override
 	public void printMessage(ConsolePriority priority, Message message){
 		String formattedMessage = formatMan.getFormattedMessage(message);

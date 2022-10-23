@@ -15,7 +15,7 @@ public class ComplexMessage{
 		}
 	}
 	
-	private List<Message> messagePieces;
+	private final List<Message> messagePieces;
 	
 	private ComplexMessage(List<Message> messagePieces){
 		this.messagePieces = messagePieces;
