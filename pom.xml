@@ -14,10 +14,21 @@
 	<description>An API for Minecraft</description>
 	<modules>
 		<module>TadukooMinecraftAPI</module>
+		<module>TadukooCoreBukkit</module>
 	</modules>
 	<properties>
 		<!-- Info -->
 		<shortName>TadukooMinecraftAPI</shortName>
 		<tadukoo.util.version>0.6-Beta-SNAPSHOT</tadukoo.util.version>
 	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- Tadukoo Minecraft API Dependency -->
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>TadukooMinecraftAPI</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>

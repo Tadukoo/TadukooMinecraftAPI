@@ -1,7 +1,7 @@
 package com.gmail.realtadukoo.MinecraftAPI;
 
 public class MinecraftFormatting{
-	public static final char SECTION_SYMBOL = 'ง';
+	public static final char SECTION_SYMBOL = 'ยง';
 	public static final char AMPERSTAND = '&';
 	
 	public static enum Color{
